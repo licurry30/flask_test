@@ -54,7 +54,7 @@ def InstanceResults():
                                PatientID=PatientID,StudyKey=StudyKey,SeriesKey=SeriesKey,Patient=row_1)
     return render_template('InstanceResults.html')
 
-
+#add new line
 if __name__ == '__main__':
     app.run(port=5002,#host='0.0.0.0',
         debug=True)
