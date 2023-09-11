@@ -1,0 +1,36 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/formbutton.css')}}" />
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{{url_for('static',filename='js/PatientSelect.js')}}"></script>
+    <title>Patient SelectPage</title>
+</head>
+
+<body>
+    <br>
+    <div align="center">
+        <h1>请输入要查询病人的ID号</h1>
+    </div>
+    </br>
+    <form style="margin-top:15px;" method="post" id="form">
+        <ul>
+            <label>PatientID:
+                <input id="PatientID" type="text" value="" size=20>
+                <td height="40" colspan="2" align="center">
+                    <input id="b01" name="submit1" type="button" value="查询" onclick="showInstance(PatientID.value)" >
+                    <input name="submit2" type="reset" value="重置">
+                </td>
+            </label>
+        </ul>
+    </form>
+    <hr style="border: 1px solid; border-color: red;">
+    <br />
+    <p>
+    <div id="myDiv"><b>Patient info will be listed here:</b></div>
+    </p>
+</body>
+</html>

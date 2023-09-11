@@ -1,0 +1,70 @@
+<!DOCTYPE html
+   PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <title>LIDC Manage Homepage </title>
+   <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/formbutton.css')}}" />
+   <script type="text/javascript" src="{{url_for('static',filename='js/lidc.js')}}"></script>
+</head>
+
+<body>
+   </br>
+   <h1> Welcome to LIDC Manage </h1>
+   <div align="right">
+      <h5>欢迎您使用LIDCManage系统！</h5>
+      </br>
+   </div>
+   <hr style="border: 1px solid; border-color: #cccccc;">
+
+   <div id="Tab">
+      <div id="con_teachmenu_6" class="hover">
+         <div id="control_teachmenu_6" class="leftmanulist">
+            <ul>
+               <li><a href="loadPatientInstance.php">导入病例</a></li>
+               <li><a href="/PatientSelect">以病人角度查询</a></li>
+               <li><a href="RadiologistSelect.php">以专家角度查询</a></li>
+               <li><a href="characterSelect.php">特征查询</a></li>
+               <li><a href="SpecialSelect.php">特殊查询</a></li>
+               <li><a href="DeleteNodule.php">删除结节信息</a></li>
+               <li><a href="DeletePatient.php">删除病人信息</a></li>
+            </ul>
+         </div>
+         <div id="content_teachmenu_6" class="common_form">
+            <h2>相关内容介绍：</h2>
+            <hr style="border: 1px solid; border-color: red;">
+            <p>
+               在过去四十多年中，医学影像技术经历了巨大的变化，医学图像变得越来越数字化和多样化，新出现的技术包括数字成像，计算机放射照相CR，直
+               接数字放射照相DR，数字减影血管造影DSA，计算机断层放射照相CT，CT仿真内窥镜成像CTVE，核磁共振成像MRI等等。利用这些技术所成的图像，可以 运用数字化方法将图像转化为数字格式以便处理和存档。
+
+               初步临床研究表明，肺部螺旋CT扫描可以提高早期发现肺癌高危个体的可能性。图像处理算法对螺旋CT图像上的病变检测有潜在的帮助，并且有助
+               于评估病变大小对图像稳定性和改变的研究。这种计算机辅助算法CAD的使用可以显著地提高螺旋CT筛查的敏感性和特异性，同时，通过减少医生解释 所需要的时间来降低成本。
+
+               肺结节计算机辅助诊断医学影像知识库中包括DICOM医学图像数据库和专家对图像做出诊断分析而产生的一些结节信息专家诊断库。它有效地利用
+               了数据库技术、多媒体技术和网络技术，使现有的肺癌医学图像资源得到充分利用，它的发展将促进医学教育和影像研究工作的继续进步。
+
+               将现有的由不同病人经检查所做的各种检查产生的图像，如CT computed tomography(计算机断层扫描检查)等，经数字化方法转化为数字格式，并
+               按DICOM标准存储。为了便于管理和利用这些图像信息数据，引用数据库技术和网络技术等将这些图像数据存储到数据库中，用户和医学研究人员可以
+               通过互联网免费查询这些信息用作对比参考，便于了解自己的身体状况和做研究。同时，医生在就诊时也可以方便地查询，利用已有的病例信息对有
+               相似病症的病人做确诊患病的概率统计和制定相应的治疗方案。并且这个肺结节计算机辅助诊断医学影像知识库在未来将用作训练计算机学习的训练
+               样本和测试样本。就目前情况，肺结节计算机辅助诊断医学影像知识库将对研究肺癌这个世界性难题有很实用的意义，会为医学图像的使用开辟一个 更广阔、更有价值的新天地。
+
+               为了为各种图像处理或CAD技术的相互比较和测评提供一个参考数据库，美国国家癌症研究会（NCI）于2001年4月起陆续颁布了肺部图像数据库联 盟（Lung Image Database Consortium
+               ,LIDC）。该影像数据库可以通过互联网访问和下载。目前LIDC包括68个病例约10000张全肺CT扫描图像（扫描 层厚1.25mm ~ 3mm，512 X
+               512像素），总容量超过6GB。每个病例对应一个文件夹，包括完整的肺部CT扫描图像（DICOM格式）100 ~ 300张，以及一
+               个注释文件（XML格式）。在注释文件中给出了4名放射学专家对每张CT片中出现的结节的定义，包括结节的主要CT征象，如毛刺征（Spiculation）、
+               分叶征（Lobulation）、钙化（Calcification）等以及结节的恶性度（Malignancy）。
+
+               由于LIDC数据库中病例的注释文件是采用XML格式编写的纯文本文件，所有注释内容均以标识符加以区分，不具备数据的查找、统计等功能。本研
+               究将LIDC数据库所提供的原始XML注释文件信息加以提取，建立相应的MySQL数据库进行存储，即将 LIDC 数据库中包含的每个病例 CT 图像的 XML 格 式注释文件导入到 MySQL 数据库中，
+               较之纯文本格式的数据组织更加结构化，进而可以借助数据库强有力的数据管理和查询功能对CT 图像上肺结节 形态、位置、CT 征象等进行查询和比较,方便其他研究人员的使用。
+            </p>
+            <hr style="border: 1px solid; border-color: red;">
+         </div>
+      </div>
+   </div>
+
+</body>
+
+</html>

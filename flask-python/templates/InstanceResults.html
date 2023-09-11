@@ -1,0 +1,34 @@
+{% if Table_head %}
+{% if PatientKey %}
+{% if PatientID %}
+{% if StudyKey %}
+{% if SeriesKey %}
+{% if Patient %}
+<table border='1'>
+    <thead>
+        <tr>
+            {% for head in Table_head %}
+            <th>{{ head }}</th>
+            {% endfor %}
+        </tr>
+    </thead>
+    <tbody>
+        {% for line in Patient %}
+        <tr>
+            <td>{{PatientKey}}</td>
+            <td>{{PatientID}}</td>
+            <td>{{StudyKey}}</td>
+            <td>{{SeriesKey}}</td>
+            {% for value in line %}
+            <td>{{ value }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endif %}
+{% endif %}
+{% endif %}
+{% endif %}
+{% endif %}
+{% endif %}
